@@ -2,7 +2,7 @@ import './App.css';
 
 function App() {
   return (  
-<form onSubmit= {handleSubmit}>
+<form onSubmit={handleSubmit}>
     
   <label>
   First Name:
@@ -32,9 +32,13 @@ function App() {
 
   );
 }
-function handleSubmit(e)
-{
-  console.log("you clicked submit");
-}
+handleSubmit = (event) => {
+ /* event.preventDefault()
+  console.log(event.target[0].value)
+  console.log(event.target.elements.username.value)
+  console.log(event.target.username.value)
+  console.log(this.inputNode.value)
+  */ //sample code that doesn't yet work
+} 
 
 export default App;
