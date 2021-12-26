@@ -1,44 +1,101 @@
+import React from 'react'; 
 import './App.css';
+import inputHandler from './inputHandler';
 
-function App() {
-  return (  
-<form onSubmit={handleSubmit}>
+class App extends React.Component
+{
+  constructor(props)
+  {
+    super(props)
+
+    this.state=
+    {
+      firstName: '',
+      lastName: '',
+      Address: '',
+      Birthdate: ''
+    }
+  }
+
+  firstNameChange = (event) => 
+  {
+    this.setState
+      ({
+          firstName: event.target.value
+      })
+  }
+  lastNameChange = (event) => 
+  {
+    this.setState
+      ({
+          lastName: event.target.value
+      })
+  }
+  addressChange = (event) => 
+  {
+    this.setState
+      ({
+          Address: event.target.value
+      })
+  }
+  birthDateChange = (event) => 
+  {
+    this.setState
+      ({
+          Birthdate: event.target.value
+      })
+  }
+  handleSubmit = (event) => 
+  {
+    alert(`${this.state.firstName} ${this.state.lastName} ${this.state.Address} ${this.state.Birthdate}`);
+  }
+  
+  render()
+  {
+    return(
+    <div className='App'>   
+    <form onSubmit={this.handleSubmit}>
+      <div>               
+      <label>
+      First Name:
+      </label>
+      <input type="text" value={this.state.firstName} onChange={this.firstNameChange}/>
+      <br></br>
+      </div> 
+  
+      <div>
+      <label>
+      Last Name:
+      </label>
+      <input type="text" value={this.state.lastName}onChange={this.lastNameChange}/>
+      <br></br>
+      </div>
+
+      <div>
+      <label>
+      Address:
+      </label>
+      <input type="text" value={this.state.Address} onChange={this.addressChange} />
+      <br></br>
+      </div>
+  
+      <div>
+      <label>
+      Birthdate (xx/xx/xxxx):
+      </label>
+      <input type="text" value={this.state.Birthdate} onChange={this.birthDateChange}/>
+      <br></br>
+      </div>
+
+      <div>
+      <button>Submit</button>
+      </div>
+    </form>
+    </div>
     
-  <label>
-  First Name:
-  <input type="text" name="first name" />
-  </label>
-  <br></br>
-
-  <label>
-   Last Name:
-  <input type="text" name="last name" />
-  </label>
-  <br></br>
-
-  <label>
-   Address:
-  <input type="text" name="Address" />
-  </label>
-  <br></br>
-
-  <label>
-   Birthdate (xx/xx/xxxx):
-  <input type="text" name="Birthdate" />
-  </label>
-  <input type="submit" value="Submit" />
-  <br></br>
-</form>
-
-  );
+    );
+  }
 }
-handleSubmit = (event) => {
- /* event.preventDefault()
-  console.log(event.target[0].value)
-  console.log(event.target.elements.username.value)
-  console.log(event.target.username.value)
-  console.log(this.inputNode.value)
-  */ //sample code that doesn't yet work
-} 
+  
 
 export default App;
