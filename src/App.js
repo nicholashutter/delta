@@ -1,6 +1,8 @@
 import React from 'react'; 
 import './App.css';
 import inputHandler from './inputHandler';
+import Address from './components/Address';
+
 
 class App extends React.Component
 {
@@ -72,11 +74,7 @@ class App extends React.Component
       </div>
 
       <div>
-      <label>
-      Address:
-      </label>
-      <input type="text" value={this.state.Address} onChange={this.addressChange} />
-      <br></br>
+        <Address />
       </div>
   
       <div>
