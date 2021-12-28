@@ -1,6 +1,10 @@
 import React from 'react'; 
-import '../App.css';
+import '../css/CustomerForm.css';
 import Address from './Address';
+import Birthdate from './Birthdate';
+import FirstName from './FirstName';
+import LastName from './LastName';
+import State from './State';
 
 
 export default class CustomerForm extends React.Component
@@ -14,7 +18,8 @@ export default class CustomerForm extends React.Component
       firstName: '',
       lastName: '',
       Address: '',
-      Birthdate: ''
+      Birthdate: '',
+      State: ''
     }
   }
 
@@ -46,10 +51,20 @@ export default class CustomerForm extends React.Component
           Birthdate: event.target.value
       })
   }
+
+  StateChange = (event) => 
+  {
+    this.setState
+      ({
+          State: event.target.value
+      })
+  }
   handleSubmit = (event) => 
   {
     alert(`${this.state.firstName} ${this.state.lastName} ${this.state.Address} ${this.state.Birthdate}`);
   }
+
+
   
   render()
   {
@@ -57,31 +72,23 @@ export default class CustomerForm extends React.Component
     <div className='CustomerForm'>   
     <form onSubmit={this.handleSubmit}>
       <div>               
-      <label>
-      First Name:
-      </label>
-      <input type="text" value={this.state.firstName} onChange={this.firstNameChange}/>
-      <br></br>
+          <FirstName firstName={this.state.firstName} onChange={() =>this.firstNameChange}/>
       </div> 
   
       <div>
-      <label>
-      Last Name:
-      </label>
-      <input type="text" value={this.state.lastName}onChange={this.lastNameChange}/>
-      <br></br>
+          <LastName lastName={this.state.lastName}/>
       </div>
 
       <div>
-        <Address />
+          <Address address={this.state.address}/>
       </div>
   
       <div>
-      <label>
-      Birthdate (xx/xx/xxxx):
-      </label>
-      <input type="text" value={this.state.Birthdate} onChange={this.birthDateChange}/>
-      <br></br>
+          <Birthdate birthDate={this.state.Birthdate}/>
+      </div>
+
+      <div>
+          <State State={this.state.State}/>
       </div>
 
       <div>
