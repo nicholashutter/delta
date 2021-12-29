@@ -76,19 +76,19 @@ export default class CustomerForm extends React.Component
       </div> 
   
       <div>
-          <LastName lastName={this.state.lastName}/>
+          <LastName lastName={this.state.lastName} onChange={() =>this.lastNameChange}/>
       </div>
 
       <div>
-          <Address address={this.state.address}/>
+          <Address address={this.state.Address} onChange={() =>this.addressChange}/>
       </div>
   
       <div>
-          <Birthdate birthDate={this.state.Birthdate}/>
+          <Birthdate birthDate={this.state.Birthdate} onChange={() =>this.birthDateChange}/>
       </div>
 
       <div>
-          <State State={this.state.State}/>
+          <State State={this.state.State} onChange={() =>this.StateChange}/>
       </div>
 
       <div>

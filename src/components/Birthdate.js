@@ -1,34 +1,18 @@
 import React, { Component } from 'react';
-import CustomerForm from './CustomerForm';
-
-
 class Birthdate extends Component {
-    constructor(props)
-    {
-      super(props)
-  
-      this.state=
-      {
-        Birthdate: ''
-      }
-    }
     render() {
         return (
-            <div>
+            <div>            
                 <label>
-                Birthdate (xx/xx/xxxx):
+                Birthdate:
                 </label>
-                <input type="text" value={this.state.Birthdate} onChange={this.BirthdateChange}/>
+                <input className="Birthdate" type="text" 
+                onChange={() =>this.props.onChange}>
+                </input>
+                {this.props.birthDate}
                 <br></br>
             </div>
         );
-    }
-    BirthdateChange = (event) => 
-    {
-      this.setState
-        ({
-            Birthdate: event.target.value
-        })
     }
 }
 

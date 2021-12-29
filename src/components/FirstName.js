@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CustomerForm from './CustomerForm';
 
 class FirstName extends Component {
     render() {
@@ -10,8 +9,8 @@ class FirstName extends Component {
                 </label>
                 <input className="FirstName" type="text" 
                 onChange={() =>this.props.onChange}>
-                {this.props.value}
-                    </input>
+                </input>
+                {this.props.firstName}
                 <br></br>
             </div>
         );
