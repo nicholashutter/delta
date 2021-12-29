@@ -6,8 +6,7 @@ class LastName extends Component {
                 <label>
                 Last Name:
                 </label>
-                <input className="LastName" type="text" 
-                onChange={() =>this.props.onChange} />
+                <input name="LastName" type="text"  />
                 <br></br>
             </div>
         );

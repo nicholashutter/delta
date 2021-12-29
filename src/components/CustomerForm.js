@@ -23,76 +23,52 @@ export default class CustomerForm extends React.Component
     }
   }
 
-  firstNameChange = (event) => 
-  {
-    this.setState
-      ({
-          firstName: event.target.value
-      })
-  }
-  lastNameChange = (event) => 
-  {
-    this.setState
-      ({
-          lastName: event.target.value
-      })
-  }
-  addressChange = (event) => 
-  {
-    this.setState
-      ({
-          Address: event.target.value
-      })
-  }
-  birthDateChange = (event) => 
-  {
-    this.setState
-      ({
-          Birthdate: event.target.value
-      })
-  }
-
-  StateChange = (event) => 
-  {
-    this.setState
-      ({
-          State: event.target.value
-      })
-  }
   handleSubmit = (event) => 
   {
-    alert(`${this.state.firstName} ${this.state.lastName} ${this.state.Address} ${this.state.Birthdate}`);
+    event.preventDefault();
+    this.setState({
+      
+      firstName: event.target.FirstName.value,
+      lastName: event.target.LastName.value,
+      Address: event.target.Address.value,
+      Birthdate: event.target.Birthdate.value,
+      State: event.target.State.value
+     });
+     
   }
 
+  componentDidMount()
+  {
+    document.getElementById("hook").innerHTML=this.state.firstName;
+  }
 
-  
   render()
   {
     return(
     <div className='CustomerForm'>   
-    <form onSubmit={this.handleSubmit}>
+    <form>
       <div>               
-          <FirstName firstName={this.state.firstName} onChange={() =>this.firstNameChange}/>
+          <FirstName firstName={this.state.firstName}/>
       </div> 
   
       <div>
-          <LastName lastName={this.state.lastName} onChange={() =>this.lastNameChange}/>
+          <LastName lastName={this.state.lastName}/>
       </div>
 
       <div>
-          <Address address={this.state.Address} onChange={() =>this.addressChange}/>
+          <Address address={this.state.Address}/>
       </div>
   
       <div>
-          <Birthdate birthDate={this.state.Birthdate} onChange={() =>this.birthDateChange}/>
+          <Birthdate birthDate={this.state.Birthdate}/>
       </div>
 
       <div>
-          <State State={this.state.State} onChange={() =>this.StateChange}/>
+          <State State={this.state.State}/>
       </div>
 
       <div>
-      <button>Submit</button>
+      <button onClick={this.handleSubmit}>Submit</button>
       </div>
     </form>
     </div>

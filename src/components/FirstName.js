@@ -7,8 +7,7 @@ class FirstName extends Component {
                 <label>
                 First Name:
                 </label>
-                <input className="FirstName" type="text" 
-                onChange={() =>this.props.onChange}  />
+                <input name="FirstName" type="text"  />
                 <br></br>
             </div>
         );

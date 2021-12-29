@@ -6,8 +6,7 @@ class Birthdate extends Component {
                 <label>
                 Birthdate:
                 </label>
-                <input className="Birthdate" type="text" 
-                onChange={() =>this.props.onChange} />
+                <input name="Birthdate" type="text" />
                 <br></br>
             </div>
         );

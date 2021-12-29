@@ -6,8 +6,7 @@ class State extends Component {
             <label>
             State:
             </label>
-            <input className="State" type="text" 
-            onChange={() =>this.props.onChange}/>
+            <input name="State" type="text" />
             <br></br>
         </div>
         );
