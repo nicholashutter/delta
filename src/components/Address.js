@@ -8,9 +8,7 @@ export class Address extends React.Component {
                 Address:
                 </label>
                 <input className="Address" type="text" 
-                onChange={() =>this.props.onChange}>
-                </input>
-                {this.props.Address}
+                onChange={() =>this.props.onChange}/>
                 <br></br>
             </div>
         )

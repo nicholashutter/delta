@@ -7,9 +7,7 @@ class State extends Component {
             State:
             </label>
             <input className="State" type="text" 
-            onChange={() =>this.props.onChange}>
-            </input>
-            {this.props.State}
+            onChange={() =>this.props.onChange}/>
             <br></br>
         </div>
         );

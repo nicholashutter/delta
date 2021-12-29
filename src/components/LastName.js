@@ -8,7 +8,6 @@ class LastName extends Component {
                 </label>
                 <input className="LastName" type="text" 
                 onChange={() =>this.props.onChange} />
-                {this.props.lastName}
                 <br></br>
             </div>
         );
