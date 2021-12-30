@@ -4,8 +4,7 @@ class Birthdate extends Component {
         return (
             <div>            
                 <label>
-                Birthdate:
-                </label>
+                Birthdate:  </label>
                 <input name="Birthdate" type="text" />
                 <br></br>
             </div>

@@ -4,8 +4,7 @@ class LastName extends Component {
         return (
             <div>            
                 <label>
-                Last Name:
-                </label>
+                Last Name:  </label>
                 <input name="LastName" type="text"  />
                 <br></br>
             </div>

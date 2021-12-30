@@ -5,8 +5,7 @@ export class Address extends React.Component {
         return (
             <div>            
                 <label>
-                Address:
-                </label>
+                Address:    </label>
                 <input name="Address" type="text" />
                 <br></br>
             </div>
