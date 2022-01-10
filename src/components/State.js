@@ -5,7 +5,7 @@ class State extends Component {
         <div> 
             <label>State:   </label>
             <select>
-                    <option selected value="Alabama">Alabama</option>
+                    <option defaultValue="Alabama" >Alabama</option>
                     <option value="Alaska">Alaska</option>
                     <option value="Arizona">Arizona</option>
                     <option value="Arkansas">Arkansas</option>
