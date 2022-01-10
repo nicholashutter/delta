@@ -50,14 +50,14 @@ class CustomerLogin extends Component {
     {
 
         this.setState({
-            userName : event.target.userName.value
+            userName : event.target.value
         })
         
     }
     passWordOnChange = (event) =>
     {
         this.setState({
-            passWord : event.target.passWord.value
+            passWord : event.target.value
         })  
     }
     componentDidUpdate = () =>
