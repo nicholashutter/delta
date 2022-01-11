@@ -20,6 +20,8 @@ class Birthdate extends Component {
 
     }
     
+
+
     componentDidMount() {
 
         //set a default date of today
@@ -73,16 +75,12 @@ class Birthdate extends Component {
             
     }
 
-    logdate() {
-
-        console.log(this.state.fulldate); 
-    }
 
     updatefulldate() {
 
         this.setState({
             fulldate: this.state.birthmonth+"/"+this.state.birthday+"/"+this.state.birthyear
-        }, this.logdate)
+        })
     }
 
     updateMaxDays() {

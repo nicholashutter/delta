@@ -16,11 +16,6 @@ class CustomerLogin extends Component {
                     <div>
                         <label>Username:</label>
                         <input type='text' name = 'userName' onChange = {this.userNameOnChange}
-
-
-                            //lift state up to app js 
-
-
                            ></input>
                     </div>
                     <div>
